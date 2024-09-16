@@ -2,14 +2,6 @@ version: '3'
 
 services:
 
-  certbot:
-    image: certbot/certbot:v1.4.0
-    volumes:
-      - ./volumes/letsencrypt:/etc/letsencrypt
-    ports: 
-      - 80:80
-    entrypoint: "certbot certonly --non-interactive --agree-tos -m ${ADMIN_EMAIL} --standalone -d ${BASE_DOMAIN}"
-
   postgresql:
     image: postgres:12-alpine
     ports:
