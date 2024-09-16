@@ -31,14 +31,14 @@ ENV DOWNLOAD_CREDENTIALS=
 ENV HMDM_URL=https://h-mdm.com/files/hmdm-5.27.1-$HMDM_VARIANT.war
 ENV CLIENT_VERSION=5.27
 
-ENV SQL_HOST=localhost
+ENV SQL_HOST=${_self.PRIVATE_DOMAIN}
 ENV SQL_PORT=5432
 ENV SQL_BASE=hmdm
 ENV SQL_USER=hmdm
 ENV SQL_PASS=Ch@nGeMe
 
 ENV PROTOCOL=https
-#ENV BASE_DOMAIN=your-domain.com
+ENV BASE_DOMAIN=${_self.PRIVATE_DOMAIN}
 
 # Set this parameter to your local IP address 
 # if your server is behind the NAT
