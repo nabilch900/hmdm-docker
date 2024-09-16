@@ -5,7 +5,7 @@ services:
   postgresql:
     image: postgres:12-alpine
     ports:
-      - 5432:5432
+      - 5432:25060
     environment:
       POSTGRES_USER: ${SQL_USER}
       POSTGRES_PASSWORD: ${SQL_PASS}
@@ -22,7 +22,7 @@ services:
       - ./volumes/work:/usr/local/tomcat/work
       - ./volumes/letsencrypt:/etc/letsencrypt
     environment:
-      SQL_HOST: postgresql
+      SQL_HOST: app-f682d5b5-61bc-4a2b-b6b3-4599a56a3fca-do-user-17022844-0.e.db.ondigitalocean.com
       SQL_USER: ${SQL_USER}
       SQL_BASE: ${SQL_BASE}
       SQL_PASS: ${SQL_PASS}
